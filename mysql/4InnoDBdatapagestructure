@@ -1,0 +1,35 @@
+<h2>InnoDB数据页结构</h2>
+
+<h5>数据也结构的快速浏览</h5>
+数据也代表的这块16kb大小的存储空间可以被划分为多个部分，不同的部分有不同的功能，各个部分的功能如图所示：
+
+![innoDB数据也结构图](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/16f13ee1e2dfac7c_gaitubao_496x569.jpg)
+
+从图中可以看出，一个InnoDB数据也的存储空间大致可以被划分成7个部分，有的部分占用字节数是可以确定的，有些部分占用的字节数是不确定的
+
+|名称|中文名|占用空间大小|简单描述|
+|---|---|---|---|
+|File Header|文件头部|38字节|页的一些通用信息|
+|Page Header|页面头部|56字节|数据页专有的一些信息|
+|Infimum Supermum|最小记录和最大记录|26字节|两个虚拟的行数据|
+|User Records|用户记录|不确定|实际存储的行记录内容|
+|Free Space|空闲空间|不确定|页中尚未使用的空间|
+|Page Directory|页面目录|不确定|页中的某些记录的相对位置|
+|File Trailer|文件尾部|8字节|校验页是否完整|
+
+<h5>记录在页中的存储</h5>
+在页的7个组成部分中，我们自己存储的记录会按照我们指定的行格式存储到User Records部分。但是在一开始生成页的时候，其实并没有User Records这个部分，每当我们插入一条记录，都会从Free Space部分，也就是尚未使用的存储空间中申请一个记录大小的空间划分到User Records部分，当Free Space部分的空间全部被User Records部分替代掉之后，也就意味着这个页使用完了，如果还有新的记录插入的话，就需要去申请新的页了，这个过程的图示如下：
+
+![记录在页中的存储过程](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/16a95c0fe86555ed_gaitubao_1031x385.jpg)
+
+<h5>记录头信息的秘密</h5>
+为了故事的顺利发展，我们先创建一个表：
+```sql
+mysql> CREATE TABLE page_demo(
+    ->     c1 INT,
+    ->     c2 INT,
+    ->     c3 VARCHAR(10000),
+    ->     PRIMARY KEY (c1)
+    -> ) CHARSET=ascii ROW_FORMAT=Compact;
+Query OK, 0 rows affected (0.03 sec)
+```
