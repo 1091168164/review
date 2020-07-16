@@ -39,6 +39,7 @@ NDB：Mysql集群专用存储引擎
 ----
 <h5>关于存储引擎的一些操作</h5>
 `show ENGINES;`
+
 ![show engines](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/WechatIMG3.png)
 
 

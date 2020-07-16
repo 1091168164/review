@@ -7,7 +7,9 @@ InnoDB是一个将表中的数据存储到磁盘上的存储引擎，所以即�
 我们平时是以记录为单位来向表中插入数据的，这些记录在磁盘上的存放方式也被称为行格式或者记录格式。设计InnoDB存储引擎的大叔们到现在为止设计了4种不同类型的行格式，分别是Compact、Redundant、Dynamic和Compressed行格式，随着时间的推移，他们可能会设计出更多的行格式，但是不管怎么变，在原理上大体都是相同的。
 
 <h5>compact行格式</h5>
+
 ![compact行格式](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/169710e8fafc21aa.jpg)
+
 从上图可知，一条完整的记录其实可以被分为记录的额外信息和记录的真实数据两大部分，下边我们详细看一下这两部分的组成
 
 <h6>记录的额外信息</h6>
@@ -55,4 +57,7 @@ InnoDB是一个将表中的数据存储到磁盘上的存储引擎，所以即�
  
  <h5>记录头信息</h5>
  除了 变长字段长度列表，null值列表之外，海鸥一个用于描述记录的 记录头信息，它是由固定的5个字节组成，5个字节就是40个二进制位，不同的为表示不同的信息，如图：
+ 
  ![记录头信息](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/WX20200716-135249.png)
+ 
+![前面2行记录的记录头信息](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/17075b82cb070959.jpg)
