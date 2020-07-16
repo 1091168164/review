@@ -61,3 +61,12 @@ InnoDB是一个将表中的数据存储到磁盘上的存储引擎，所以即�
  ![记录头信息](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/WX20200716-135249.png)
  
 ![前面2行记录的记录头信息](https://tianxinmao.oss-cn-hangzhou.aliyuncs.com/study/17075b82cb070959.jpg)
+
+<h5>记录的真实数据<h5>
+记录的真实数据除了我们自己定义的列的数据以外，MySQL会为每个记录默认的添加一些列（也称为隐藏列），具体的列如下：
+
+|列名|是否必须|占用空间|描述|
+|---|---|---|---|
+|db_row_id|否|6字节|行id,唯一表示一条记录|
+|db_trx_id|是|6字节|事务id|
+|db_roll_ptr|是|7字节|回滚指针|
