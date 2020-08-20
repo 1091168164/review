@@ -15,3 +15,17 @@
 |PAGE_INDEX_ID|8字节|索引ID，表示当前页属于哪个索引|
 |PAGE_BTR_SEG_LEAF|10字节|B+树叶子段的头部信息，仅在B+树的Root页定义|
 |PAGE_BTR_SEG_TOP|10字节|B+树非叶子段的头部信息，仅在B+树的Root页定义|
+
+
+
+
+|名称|占用空间大小|描述|
+|---|---|---|
+|FIL_PAGE_SPACE_OR_CHKSUM|4字节|页的校验和（checksum值）|
+|FIL_PAGE_OFFSET|4字节|页号|
+|FIL_PAGE_PREV|4字节|上一个页的页号|
+|FIL_PAGE_NEXT|4字节|下一个页的页号|
+|FIL_PAGE_LSN|8字节|页面被最后修改时对应的日志序列位置（英文名是：Log Sequence Number）|
+|FIL_PAGE_TYPE|2字节|该页的类型|
+|FIL_PAGE_FILE_FLUSH_LSN|8字节|仅在系统表空间的一个页中定义，代表文件至少被刷新到了对应的LSN值|
+|FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID|4字节|页属于哪个表空间|
