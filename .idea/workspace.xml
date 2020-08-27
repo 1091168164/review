@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d55604d5-3aaf-4f92-9aff-e85e989ee61f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql/4InnoDBdatapagestructure.md" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/4InnoDBdatapagestructure.md" afterDir="false" />
     </list>
@@ -150,7 +149,7 @@
       <workItem from="1595948506394" duration="1437000" />
       <workItem from="1597903421462" duration="1365000" />
       <workItem from="1598424813882" duration="6076000" />
-      <workItem from="1598447350110" duration="3364000" />
+      <workItem from="1598447350110" duration="6011000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1594880386077</created>
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597903985900</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1598498912908</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598498912908</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,9 +244,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="add note" />
-    <option name="LAST_COMMIT_MESSAGE" value="add note" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="masterDetails">
     <states>
