@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d55604d5-3aaf-4f92-9aff-e85e989ee61f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mysql/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/4InnoDBdatapagestructure.md" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/4InnoDBdatapagestructure.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +113,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -149,7 +150,10 @@
       <workItem from="1595948506394" duration="1437000" />
       <workItem from="1597903421462" duration="1365000" />
       <workItem from="1598424813882" duration="6076000" />
-      <workItem from="1598447350110" duration="6011000" />
+      <workItem from="1598447350110" duration="10116000" />
+      <workItem from="1598577066046" duration="4877000" />
+      <workItem from="1598837093101" duration="7640000" />
+      <workItem from="1598852080907" duration="524000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1594880386077</created>
